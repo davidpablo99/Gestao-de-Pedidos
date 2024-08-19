@@ -99,5 +99,5 @@ Este projeto é licenciado sob a [Licença MIT](LICENSE).
 
 ## Contato
 
-Se tiver dúvidas ou precisar de suporte, entre em contato através de [seu-email@example.com](mailto:seu-email@example.com).
+Se tiver dúvidas ou precisar de suporte, entre em contato através de [davidpablo99@gmail.com](mailto:davidpablo99@gmail.com).
 
