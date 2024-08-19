@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="cadastroPedidos.html">Cadastro de Pedidos</a>
+            <a href="cadastroClientes.html">Cadastro de Clientes</a>
+            <a href="cadastroProduto.html">Cadastro de Produtos</a>
+            <a href="vendas.html">Vendas</a>
+            <a href="financeiro.html">Financeiro</a>
+        </nav>
+    </header><br>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+    <h1>Cadastro de Produtos</h1><br>
+
+    <section class="cadastro-produtos" id="cadastro-produtos">
+        <form id="form-cadastro-produto">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required> <br><br>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea><br><br>
+
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" name="preco" required><br><br>
+
+            <button type="submit" id="cadastrar">Cadastrar</button>
+        </form>
+        <div id="mensagem-cadastro"></div>
+    </section>
+    <br><br>
+    <hr>
+    <br><br>
+    <section class="produtos-cadastrados" id="produtos-cadastrados">
+        <h3>Produtos Cadastrados</h3><br>
+        <table id="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-produtos">
+                <!-- Produtos serão inseridos aqui dinamicamente com JavaScript -->
+            </tbody>
+        </table>
+        <button id="btn-limpar-produtos">Limpar Todos os Produtos</button>
+    </section>
+    <script src="cadastroProduto.js"></script>
+</body>
+</html>

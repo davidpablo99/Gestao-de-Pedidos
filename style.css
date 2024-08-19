@@ -1,0 +1,374 @@
+*{
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(rgb(105, 105, 105), green, blue, alpha);
+}
+
+/* Tema claro (padrão) */
+:root {
+    --bg-color: #ffffff;
+    --second-bg-color: #f0f0f0;
+    --text-color: #000000;
+    --main-color: #007bff;
+}
+/* Tema escuro */
+.dark-mode {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin-top: 4rem;
+    color: var(--main-color);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.header {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1em;
+    text-align: center;
+}
+input{
+    background-color: rgb(233, 233, 233);
+}
+textarea{
+    background-color: rgb(233, 233, 233);
+}
+.navbar {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 1em;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#painel{
+    display: flex;
+    justify-content: space-evenly;
+    /* border: solid white; */
+    margin: 2rem;
+    padding: 2rem;
+}
+
+#form-pedido{
+    /* border: solid white; */
+    border-width: 1px;
+    padding: 1rem;
+
+}
+#lista-de-pedidos{
+    /* border: solid white; */
+    border-width: 1px;
+    padding: 1rem;
+}
+#checkout{
+    flex-direction: column; /* Colocar os itens em coluna */
+    padding: 1rem;
+    border: 1px solid white;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.cadastro-produtos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cadastro-produtos input{
+    width: 50%;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--main-color);
+    color: black;
+    transition: 0.5s;
+}
+.produtos-cadastrados{
+    text-align: center;
+}
+.cadastrarPedido{
+    flex-direction: column; /* Colocar os itens em coluna */
+}
+.cadastrarPedido input, select {
+    width: 100%;
+}
+#form-cadastro-produto input, textarea{
+    width: 100%;
+}
+
+.cadastroClientes{
+    text-align: center;
+}
+
+#form-cliente {
+    display: flex;
+    flex-direction: column; /* Colocar os itens em coluna */
+    align-items: center; /* Centralizar os itens no eixo horizontal */
+    justify-content: center; /* Centralizar os itens no eixo vertical */
+    text-align: center;
+}
+
+#form-cliente input{
+    padding: 5px;
+}
+#form-cliente button{
+    width: 25%;
+}
+
+#filtrar{
+    width: 10rem;
+}
+#filtro{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* text-align: center; */
+}
+.vendas {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    text-align: center;
+}
+
+.vendas h1 {
+    margin-bottom: 20px;
+}
+
+.filtro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filtro label,
+.filtro input,
+.filtro button {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 300px; /* Define a largura máxima */
+}
+
+#tabela-vendas {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+#tabela-vendas th,
+#tabela-vendas tr,
+#tabela-vendas td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.paginação {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px; /* Define a largura máxima */
+}
+
+.paginação button {
+    width: 48%;
+    padding: 10px;
+    background-color: #007b73;
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.paginação button:hover {
+    background-color: var(--main-color);
+    color: black;
+    transition: 0.5s;
+}
+.financeiro {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    text-align: center;
+}
+
+.financeiro h1 {
+    margin-bottom: 20px;
+}
+
+.financeiro .filtro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.financeiro .filtro label,
+.financeiro .filtro input,
+.financeiro .filtro button {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 300px; /* Define a largura máxima */
+}
+
+#tabela-financeiro {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+#tabela-financeiro th,
+#tabela-financeiro td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.paginação {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px; /* Define a largura máxima */
+}
+
+.paginação button {
+    width: 48%;
+    padding: 10px;
+    background-color: #007b73;
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.paginação button:hover {
+    background-color: var(--main-color);
+    color: black;
+    transition: 0.5s;
+}
+.produto-card{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+button.editar, button.excluir {
+    padding: 0.25rem 0.5rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button.editar {
+    background-color: #28a745;
+}
+
+button.editar:hover {
+    background-color: #218838;
+}
+
+button.excluir {
+    background-color: #dc3545;
+}
+
+button.excluir:hover {
+    background-color: #c82333;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+/* Estilos para o botão de tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Light Mode (Padrão) */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Altere o ícone do tema */
+body.dark-mode #theme-icon {
+    content: '\f186'; /* ícone de sol */
+}
+
+.navbar a {
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}

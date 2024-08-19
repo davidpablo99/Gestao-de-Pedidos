@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="cadastroPedidos.html">Cadastro de Pedidos</a> 
+            <a href="cadastroClientes.html">Cadastro de Clientes</a>
+            <a href="cadastroProduto.html">Cadastro de Produtos</a>
+            <a href="vendas.html">Vendas</a>
+            <a href="financeiro.html">Financeiro</a>
+        </nav>
+    </header><br>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+    <section class="cadastroClientes" id="cadastroClientes">
+        <h1>Cadastro de Clientes</h1><br><br>
+        <form action="" id="form-cliente">
+            <div class="form-client">
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="David Queiroz...">
+                <label for="email">E-Mail: </label>
+                <input type="email" name="email" id="email" placeholder="exemplo@gmail.com">
+                <label for="telefone">Telefone: </label>
+                <input type="tel" name="telefone" id="telefone" placeholder="Digite o Telefone">
+                <label for="endereco">Endereço: </label>
+                <input type="text" name="endereco" id="endereco" placeholder="Seu Endereço">
+            </div><br><br><br>
+            <button type="submit">Cadastrar Cliente</button>
+        </form><br><br>
+    </section>
+    
+    <hr>
+    <button type="button" id="btn-limpar-clientes">Limpar Clientes</button><br><br>
+    <section class="clientes" id="clientes">
+        
+        <table id="tabela-clientes">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-clientes">
+                <!-- Aqui você pode adicionar linhas de dados de clientes dinamicamente com JavaScript -->
+            </tbody>
+        </table>
+    </section>
+    <script src="cadastroClientes.js"></script>
+</body>
+</html>
