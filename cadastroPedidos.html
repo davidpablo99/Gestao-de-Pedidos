@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="cadastroPedidos.html">Cadastro de Pedidos</a>
+            <a href="cadastroClientes.html">Cadastro de Clientes</a>
+            <a href="cadastroProduto.html">Cadastro de Produtos</a>
+            <a href="vendas.html">Vendas</a>
+            <a href="financeiro.html">Financeiro</a>
+        </nav>
+    </header><br>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+    <section class="cadastroPedidos" id="cadastroPedidos">
+        <h1>Cadastro de Pedidos</h1>
+    </section>
+
+    <section id="painel">
+        <section class="form" id="form">
+            <form action="" id="form-pedido">
+                <div class="cadastrarPedido">
+                    <h3 style="text-align: center;">Cadastrar Pedido</h3>
+                    <label for="produto">Produto: </label>
+                    <select name="produto" id="produto">
+                        <option value="" selected>Selecione um produto</option>
+                        <!-- Opções de produtos serão adicionadas dinamicamente com JavaScript -->
+                    </select>
+                    <br><br>
+                    <label for="quantidade">Quantidade: </label>
+                    <input type="number" name="quantidade" id="quantidade" min="1" value="1">
+                    <br><br>
+                    <label for="preco">Preço: </label>
+                    <input type="number" name="preco" id="preco" step="0.01">
+                    <br><br>
+                    <label for="valor-total">Valor Total: </label>
+                    <span id="valor-total">0.00</span>
+                    <br><br>
+                    <button type="submit" id="btn-adicionar-pedido">Adicionar Pedido</button>
+                    <br><br>
+                    <div id="lista-de-pedidos">
+                        <h3 style="text-align: center;">Pedidos</h3><br>
+                        <table id="tabela-pedidos">
+                            <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Quantidade</th>
+                                    <th>Preço</th>
+                                    <th>Valor Total</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-pedidos">
+                                <!-- Os pedidos serão inseridos aqui dinamicamente com JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+            </form>
+            
+            <div class="checkout" id="checkout">
+                <div class="pagamentoEntrega">
+                    <div class="pagamento">
+                        <h3>Método de Pagamento</h3><br>
+                        <input type="radio" name="pagamento" id="pix" checked>
+                        <label for="pix">Pix</label>
+                        <input type="radio" name="pagamento" id="dinheiro">
+                        <i class='bx bx-money' style='color:#007bff'></i>
+                        <label for="dinheiro">Dinheiro</label>
+                        <input type="radio" name="pagamento" id="debito">
+                        <i class='bx bx-credit-card' style='color:#007bff'></i>
+                        <label for="debito">Débito</label>
+                        <input type="radio" name="pagamento" id="credito">
+                        <i class='bx bxs-credit-card' style='color:#007bff'></i>
+                        <label for="credito">Crédito</label>
+                    </div>
+                </div>
+                
+                <div class="entrega">
+                    <br>
+                    <h3>Entregar</h3><br>
+                    <input type="radio" name="entrega" id="entregasim">
+                    <label for="entregasim">Sim</label>
+                    <input type="radio" name="entrega" id="entreganao">
+                    <label for="entreganao">Não</label>
+                </div>
+                <br>
+                
+                <!-- Campo de entrada para o endereço de entrega -->
+                <div id="endereco-entrega" style="display: none;">
+                    <label for="endereco">Endereço de Entrega:</label><br><br>
+                    <input type="text" id="endereco" name="endereco" placeholder="Digite o endereço de entrega">
+                </div>
+                <br>
+                
+                <div class="observacoes">
+                    <label for="observacoes">Observações:</label><br><br>
+                    <textarea name="observacoes" id="observacoes"></textarea>
+                </div>
+                <br>
+                <div class="cadastrarPedido">
+                    <button type="button" id="btn-cadastrar-pedido">Cadastrar Pedido</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script src="cadastroPedidos.js"></script>
+</body>
+</html>

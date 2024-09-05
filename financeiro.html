@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">     
+        <nav class="navbar">
+            <a href="cadastroPedidos.html">Cadastro de Pedidos</a> 
+            <a href="cadastroClientes.html">Cadastro de Clientes</a>
+            <a href="cadastroProduto.html">Cadastro de Produtos</a>
+            <a href="vendas.html">Vendas</a>
+            <a href="financeiro.html">Financeiro</a>
+        </nav>
+    </header><br>
+    
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+    <section class="financeiro" id="financeiro">
+        <h1>Financeiro</h1>
+        <div class="filtro">
+            <label for="filtro-data">Filtrar por data:</label>
+            <input type="date" id="filtro-data" name="filtro-data">
+            <button type="button" id="filtrar">Filtrar</button>
+        </div>
+        <button type="button" id="btn-limpar-financeiro">Limpar Armazenamento</button>
+        
+        <table id="tabela-financeiro">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Método de Pagamento</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-financeiro">
+                <!-- Linhas de dados financeiros serão adicionadas aqui -->
+            </tbody>
+        </table>
+        
+        <div class="paginação">
+            <button type="button" id="anterior">Anterior</button>
+            <button type="button" id="proximo">Próximo</button>
+        </div>
+    </section>
+    
+    <script src="financeiro.js"></script>
+</body>
+</html>
